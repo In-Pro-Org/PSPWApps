@@ -70,20 +70,20 @@ function Write-FormattedLog {
             return
         }
         'routes' {
-            $icon = '✅'
-            $Color = 'Cyan'
+            $icon = '➡ '
+            $Color = [System.ConsoleColor]::Cyan
         }
         'database'	{
             $icon = '💾'
-            $Color = 'DarkMagenta'
+            $Color = [System.ConsoleColor]::DarkMagenta
         }
         'api' {
             $icon = '🔗'
-            $Color = 'DarkCyan'
+            $Color = [System.ConsoleColor]::DarkCyan
         }
         'htmx' {
             $icon = '🔗'
-            $Color = 'DarkGreen'
+            $Color = [System.ConsoleColor]::DarkGreen
         }
         'debug' {
             $icon = '🐞'
@@ -93,25 +93,25 @@ function Write-FormattedLog {
         }
         'informational' {
             $icon = 'ℹ️'
-            $Color = 'Blue'
+            $Color = [System.ConsoleColor]::Blue
         }
         'verbose'	{
             $icon = '🔍'
-            $Color = 'DarkYellow'
+            $Color = [System.ConsoleColor]::DarkYellow
         }
         'warning'	{
             $icon = '⚠️'
-            $Color = 'Yellow'
+            $Color = [System.ConsoleColor]::Yellow
         }
         'error' {
             $icon = '❌'
-            $Color = 'DarkRed'
-            $LineColor = 'Red'
+            $Color = [System.ConsoleColor]::DarkRed
+            $LineColor = [System.ConsoleColor]::Red
         }
         default {
             $icon = '✅'
-            $Color = 'White'
-            $LineColor = 'White'
+            $Color = [System.ConsoleColor]::White
+            $LineColor = [System.ConsoleColor]::White
         }
     }
 
