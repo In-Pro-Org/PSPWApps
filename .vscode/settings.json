@@ -1,0 +1,161 @@
+{
+  // --- Editor ---
+  "editor.largeFileOptimizations": true,
+  "editor.tabSize": 4,
+  "editor.formatOnSave": true,
+
+  // --- Files ---
+  // When enabled, will trim trailing whitespace when you save a file.
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.pode": "html"
+  },
+
+  // --- Markdown --
+
+  // --- Markdown/Linting ---
+  "markdownlint.config": {
+    "default": true,
+    "MD003": {
+      "style": "atx"
+    },
+    "MD013": false,
+    "MD024": false,
+    "MD029": {
+      "style": "one_or_ordered"
+    },
+    "MD033": false,
+    "MD034": false,
+    "no-hard-tabs": true
+  },
+
+  // --- VSCode ---
+  // --- VSCode/Language ---
+  "vscode.json-language-features": true,
+
+  // ---> PowerShell --->
+  "[powershell]": {
+    "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+    "editor.semanticHighlighting.enabled": false,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.defaultFormatter": "ms-vscode.powershell"
+  },
+
+  // --- PowerShell/ScriptAnalysis ---
+  // specifies the location of the explicitly ScriptAnalyzer settings file
+  "powershell.scriptAnalysis.enable": true,
+  "powershell.scriptAnalysis.settingsPath": "/config/PSScriptAnalyzerSettings.psd1",
+  //"powershell.scriptAnalysis.settingsPath": "${workspaceFolder}/src/PSScriptAnalyzerSettings.psd1",
+
+  // --- PowerShell/Code Formatting ---
+  // specifies the PowerShell coding style used in this project (https://github.com/PoshCode/PowerShellPracticeAndStyle/issues/81)
+  "powershell.codeFormatting.ignoreOneLineBlock": false,
+  "powershell.codeFormatting.preset": "Custom",
+  "powershell.codeFormatting.openBraceOnSameLine": true,
+  "powershell.codeFormatting.newLineAfterOpenBrace": true,
+  "powershell.codeFormatting.newLineAfterCloseBrace": true,
+  "powershell.codeFormatting.whitespaceAroundOperator": true,
+  "powershell.codeFormatting.whitespaceBeforeOpenParen": true,
+  "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
+  //"powershell.codeFormatting.useCorrectCasing": true,
+  "powershell.codeFormatting.autoCorrectAliases": true,
+
+  // <--- PowerShell <---
+
+  // --- Editor/Default Formatter ---
+  // "[markdown]": {
+  //   "editor.defaultFormatter": "darkriszty.markdown-table-prettify"
+  // },
+  // "[sql]": {
+  //   "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  // },
+  // "[xml]": {
+  //   "editor.defaultFormatter": "PrateekMahendrakar.prettyxml"
+  // },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggest.insertMode": "replace",
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  },
+  // "json.schemas": [
+  //   {
+  //     "fileMatch": ["**/*.adf.json"],
+  //     "url": "./.vscode/Schema-Atlassian-Document-Format.json"
+  //   }
+  // ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+
+  // --- Git ---
+  // "git.enableSmartCommit": true,
+  // "git.confirmSync": true,
+  // "git.ignoreLimitWarning": true,
+  // "git.branchProtection": ["main", "distro", "release/*"],
+  // "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
+  // "git.branchRandomName.enable": false,
+  // "git.pullBeforeCheckout": true,
+  // "git.mergeEditor": true,
+  // "git.diagnosticsCommitHook.enabled": true,
+  // "git.diagnosticsCommitHook.sources": {
+  //   "*": "error",
+  //   "ts": "warning",
+  //   "eslint": "warning"
+  // },
+
+  // --- GitLens ---
+  // "gitlens.launchpad.indicator.useColors": true,
+  // "gitlens.telemetry.enabled": false,
+  // "gitlens.advanced.commits.delayLoadingFileDetails": true,
+
+  // --- GitLens/AI ---
+  // "gitlens.ai.experimental.composer.enabled": true,
+  // "gitlens.ai.largePromptWarningThreshold": 40000,
+  // "gitlens.ai.modelOptions.temperature": 0.4,
+  // "gitlens.ai.generateCommitMessage.customInstructions": "# **Git Flow & PR Conventions:**  Use the **develop** branch as the base for all feature work and pull requests. Name branches and PR titles according to git-flow and **Conventional Commits** standards (e.g. `feat(scope): add new X`), and always include the issue key in the PR title. The CI will enforce Conventional Commit formatting on PR titles. PRs should target **develop** and once approved, merge into develop. Releases are prepared on develop and merged to **main** for publication.  | Action          | Convention                                         | |-----------------|----------------------------------------------------| | Branch Naming   | `feature/<short-description>`, `fix/<issue>`, etc. | | Commit Messages | `feat(mod): add feature description #issue`, etc.  | | Pull Requests   | Must include tests, documentation, and changelog,  | |                 | following Conventional Commit Messages as title    |  ---  ## Commit Message Rules (Conventional Commits)  ### 1. The anatomy  ```text <type>[optional scope][!]: <subject> <blank line> [optional body] <blank line> [optional footer(s)] ```  - **type**: one of `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`. - **scope** (optional): area of the codebase, e.g. `module`, `script`, `installer`, `psgallery`, `ci`, `api`, `ui`. Use kebab-case for multiwords (`session-manager`). - **!** (optional): marks a breaking change (also explain it in body or footer). - **subject**: short imperative summary (no period at end, max ~72 chars). - **body** (optional): motivation, context, tradeoffs; wrap at ~72 chars. - **footer(s)** (optional): references and metadata, one per line, e.g.:    - `Closes #123`, `Refs ABC-456`   - `BREAKING CHANGE: <what changed and migration instructions>`  #### Examples (good)  ```text feat(module): add Connect-Tenant with MFA support  fix(script): handle null ServicePrincipalId in bootstrap.ps1  docs(readme): add examples for Start-Backup job  refactor(session-manager): extract retry logic into helper  perf(api): cache token for 5 minutes to cut requests  test(psgallery): add Pester tests for Install-Module flow  build(ci): publish artifacts only on tagged builds  ci(github-actions): pin actions/checkout@v4  chore: rename default branch to main  revert: revert \"feat(module): add Connect-Tenant with MFA support\" ```  #### Breaking changes (two ways)  ```text feat(module)!: drop support for PowerShell 5.1  BREAKING CHANGE: The module now requires PowerShell 7+. Update your runners and local environments accordingly. ```  or  ```text feat(module): migrate to new configuration schema  BREAKING CHANGE: Config file now uses `Connections` instead of `Profiles`. Run `.\\tools\\migrate-config.ps1` or update manually. ```  ---  ### 2. When to use each type  - `feat`: user-visible new capability (triggers **MINOR** bump). - `fix`: bug fix (triggers **PATCH** bump). - `docs`: README, changelog, comments only. - `style`: formatting, whitespace, no code behavior change. - `refactor`: code change that neither fixes a bug nor adds a feature. - `perf`: performance improvement. - `test`: add/adjust tests, Pester/pytest/etc. - `build`: build system, packaging, versioning, module manifest tweaks. - `ci`: CI configuration (e.g., GitHub Actions, Azure Pipelines). - `chore`: housekeeping (deps update, rename files), no src/test impact. - `revert`: a revert of a previous commit; message should reference the hash.  > Mapping to SemVer: `feat` → **minor**, `fix` → **patch**, `!` or `BREAKING CHANGE` anywhere → **major**.  ---  ### 3. Writing good subjects  - Use **imperative mood**: \"add\", \"fix\", \"update\", not \"added/adding/updates\". - Keep it **concise** and **specific**: mention the \"what\" and (if helpful) the \"where\". - Avoid redundant words like \"issue\", \"bug\", \"problem\"—the type already conveys intent. - No trailing punctuation; avoid emojis.  **Bad:** `fix: fixed bug` **Good:** `fix(installer): correct target path on Windows Server 2019`  ---  ### 4. Bodies that add value  Use the body to explain **why** not just **what**:  - Context: what led to the change? - Approach: key decisions or tradeoffs. - Impact: risks, user actions required. - For PowerShell code, include command examples or before/after snippets.  Example body:  ```text This ensures Connect-Tenant retries transient 429s from Graph. Implements exponential backoff with jitter and caps at 30s total wait.  Before: - Immediate failure on first 429.  After: - Up to 3 retries before surfacing error.  Refs #231 ```  ---  ### 5. Footers & issue references  - Use `Closes #<id>` to auto-close issues when merging to default branch. - Use `Refs <id>` when linking without closing. - Use one footer per line; put them **after** the body.  #### Examples  ```text Closes #742 Refs ABC-99 ```  ---  ### 6. Scopes for this repo (suggested)  Pick from this list to stay consistent:  - `module`, `script`, `installer`, `psgallery`, `docs`, `ci`, `build`,   `api`, `session-manager`, `auth`, `logging`, `telemetry`, `deps`.  If you need a new scope, choose a clear, short, kebab-case term.  ---  ### 7. Quick templates  #### **Feature**  ```text feat(<scope>): <subject>  <body>  <optional footers> ```  #### **Fix**  ```text fix(<scope>): <subject>  <body>  Closes #<issue> ```  #### **Breaking**  ```text <type>(<scope>)!: <subject>  <body explaining the break and migration steps>  BREAKING CHANGE: <short summary> ```  #### **Revert**  ```text revert: revert \"<original header>\"  Reason for revert (if not obvious).  Refs <commit-hash> ```  ---",
+  // "gitlens.ai.generateCommits.customInstructions": "# **Git Flow & PR Conventions:**  Use the **develop** branch as the base for all feature work and pull requests. Name branches and PR titles according to git-flow and **Conventional Commits** standards (e.g. `feat(scope): add new X`), and always include the issue key in the PR title. The CI will enforce Conventional Commit formatting on PR titles. PRs should target **develop** and once approved, merge into develop. Releases are prepared on develop and merged to **main** for publication.  | Action          | Convention                                         | |-----------------|----------------------------------------------------| | Branch Naming   | `feature/<short-description>`, `fix/<issue>`, etc. | | Commit Messages | `feat(mod): add feature description #issue`, etc.  | | Pull Requests   | Must include tests, documentation, and changelog,  | |                 | following Conventional Commit Messages as title    |  ---  ## Commit Message Rules (Conventional Commits)  ### 1. The anatomy  ```text <type>[optional scope][!]: <subject> <blank line> [optional body] <blank line> [optional footer(s)] ```  - **type**: one of `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`. - **scope** (optional): area of the codebase, e.g. `module`, `script`, `installer`, `psgallery`, `ci`, `api`, `ui`. Use kebab-case for multiwords (`session-manager`). - **!** (optional): marks a breaking change (also explain it in body or footer). - **subject**: short imperative summary (no period at end, max ~72 chars). - **body** (optional): motivation, context, tradeoffs; wrap at ~72 chars. - **footer(s)** (optional): references and metadata, one per line, e.g.:    - `Closes #123`, `Refs ABC-456`   - `BREAKING CHANGE: <what changed and migration instructions>`  #### Examples (good)  ```text feat(module): add Connect-Tenant with MFA support  fix(script): handle null ServicePrincipalId in bootstrap.ps1  docs(readme): add examples for Start-Backup job  refactor(session-manager): extract retry logic into helper  perf(api): cache token for 5 minutes to cut requests  test(psgallery): add Pester tests for Install-Module flow  build(ci): publish artifacts only on tagged builds  ci(github-actions): pin actions/checkout@v4  chore: rename default branch to main  revert: revert \"feat(module): add Connect-Tenant with MFA support\" ```  #### Breaking changes (two ways)  ```text feat(module)!: drop support for PowerShell 5.1  BREAKING CHANGE: The module now requires PowerShell 7+. Update your runners and local environments accordingly. ```  or  ```text feat(module): migrate to new configuration schema  BREAKING CHANGE: Config file now uses `Connections` instead of `Profiles`. Run `.\\tools\\migrate-config.ps1` or update manually. ```  ---  ### 2. When to use each type  - `feat`: user-visible new capability (triggers **MINOR** bump). - `fix`: bug fix (triggers **PATCH** bump). - `docs`: README, changelog, comments only. - `style`: formatting, whitespace, no code behavior change. - `refactor`: code change that neither fixes a bug nor adds a feature. - `perf`: performance improvement. - `test`: add/adjust tests, Pester/pytest/etc. - `build`: build system, packaging, versioning, module manifest tweaks. - `ci`: CI configuration (e.g., GitHub Actions, Azure Pipelines). - `chore`: housekeeping (deps update, rename files), no src/test impact. - `revert`: a revert of a previous commit; message should reference the hash.  > Mapping to SemVer: `feat` → **minor**, `fix` → **patch**, `!` or `BREAKING CHANGE` anywhere → **major**.  ---  ### 3. Writing good subjects  - Use **imperative mood**: \"add\", \"fix\", \"update\", not \"added/adding/updates\". - Keep it **concise** and **specific**: mention the \"what\" and (if helpful) the \"where\". - Avoid redundant words like \"issue\", \"bug\", \"problem\"—the type already conveys intent. - No trailing punctuation; avoid emojis.  **Bad:** `fix: fixed bug` **Good:** `fix(installer): correct target path on Windows Server 2019`  ---  ### 4. Bodies that add value  Use the body to explain **why** not just **what**:  - Context: what led to the change? - Approach: key decisions or tradeoffs. - Impact: risks, user actions required. - For PowerShell code, include command examples or before/after snippets.  Example body:  ```text This ensures Connect-Tenant retries transient 429s from Graph. Implements exponential backoff with jitter and caps at 30s total wait.  Before: - Immediate failure on first 429.  After: - Up to 3 retries before surfacing error.  Refs #231 ```  ---  ### 5. Footers & issue references  - Use `Closes #<id>` to auto-close issues when merging to default branch. - Use `Refs <id>` when linking without closing. - Use one footer per line; put them **after** the body.  #### Examples  ```text Closes #742 Refs ABC-99 ```  ---  ### 6. Scopes for this repo (suggested)  Pick from this list to stay consistent:  - `module`, `script`, `installer`, `psgallery`, `docs`, `ci`, `build`,   `api`, `session-manager`, `auth`, `logging`, `telemetry`, `deps`.  If you need a new scope, choose a clear, short, kebab-case term.  ---  ### 7. Quick templates  #### **Feature**  ```text feat(<scope>): <subject>  <body>  <optional footers> ```  #### **Fix**  ```text fix(<scope>): <subject>  <body>  Closes #<issue> ```  #### **Breaking**  ```text <type>(<scope>)!: <subject>  <body explaining the break and migration steps>  BREAKING CHANGE: <short summary> ```  #### **Revert**  ```text revert: revert \"<original header>\"  Reason for revert (if not obvious).  Refs <commit-hash> ```  ---",
+
+  // --- GitLens/Views ---
+  // "gitlens.views.scm.grouped.hiddenViews": {
+  //   "repositories": false
+  // },
+  // "gitlens.views.scm.grouped.views": {
+  //   "searchAndCompare": true
+  // },
+  // "gitlens.views.commits.showStashes": true,
+  // "gitlens.views.repositories.showIncomingActivity": true,
+  // "gitlens.views.repositories.compact": true,
+  // "gitlens.views.branches.showRemoteBranches": true,
+  // "gitlens.views.workspaces.showIncomingActivity": true,
+
+  // --- GitLens/GitKraken ---
+  // "gitlens.gitkraken.cli.integration.enabled": true,
+
+  // --- GitHub ---
+  // "githubPullRequests.experimental.createView": true,
+  // "githubPullRequests.assignCreated": "${user}",
+  // "githubPullRequests.defaultMergeMethod": "squash",
+  // "githubPullRequests.ignoredPullRequestBranches": ["main"],
+  // "githubPullRequests.codingAgent.enabled": true,
+  // "githubPullRequests.codingAgent.uiIntegration": true,
+
+  // --- Docker Compose ---
+"docker.extension.enableComposeLanguageServer": true
+}

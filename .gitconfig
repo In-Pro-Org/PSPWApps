@@ -1,0 +1,4 @@
+# .gitconfig
+[alias]
+    codex-fix = "!f() { git add . && codex.cmd --full-auto --prompt \"Fix lint errors and test errors before commit\"; }; f"
+    codex-review = "!f() { codex.cmd --prompt \"Review changes in this PR and suggest improvements if any\"; }; f"

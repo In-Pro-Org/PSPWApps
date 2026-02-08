@@ -1,0 +1,45 @@
+{
+  // XML-Schemas für Pester-Reports
+  "xml.fileAssociations": [
+    // === TESTRESULT: NUnit 2.5 (klassisches NUnitXml) ===
+    {
+      // Benenne deinen Output z.B. so:
+      // TestResult.OutputPath = "Pester-TestResults.NUnit25.xml"
+      "pattern": "**/TestResults.NUnit25.xml",
+      "systemId": "${userHome}/Documents/PowerShell/Modules/Pester/5.7.1/schemas/NUnit25/nunit_schema_2.5.xsd"
+    },
+
+    // === TESTRESULT: NUnit 3 ===
+    {
+      // z.B. TestResult.OutputPath = "Pester-TestResults.NUnit3.xml"
+      "pattern": "**/TestResults.NUnit3.xml",
+      "systemId": "${userHome}/Documents/PowerShell/Modules/Pester/5.7.1/schemas/NUnit3/TestResult.xsd"
+    },
+
+    // === TESTRESULT: JUnit 4 XML ===
+    {
+      // z.B. TestResult.OutputPath = "Pester-TestResults.JUnit.xml"
+      "pattern": "**/TestResults.JUnit.xml",
+      "systemId": "${userHome}/Documents/PowerShell/Modules/Pester/5.7.1/schemas/JUnit4/junit_schema_4.xsd"
+    },
+
+    // === CODECOVERAGE: JaCoCo ===
+    {
+      // z.B. CodeCoverage.OutputPath = "Pester-Coverage.JaCoCo.xml"
+      "pattern": "**/Coverage.JaCoCo.xml",
+      "systemId": "${userHome}/Documents/PowerShell/Modules/Pester/5.7.1/schemas/JaCoCo/report.dtd"
+    },
+    {
+      // z.B. CodeCoverage.OutputPath = "Coverage.CoverageGutters.xml"
+      "pattern": "**/Coverage.CoverageGutters.xml",
+      "systemId": "${userHome}/Documents/PowerShell/Modules/Pester/5.7.1/schemas/JaCoCo/report.dtd"
+    },
+
+    // === CODECOVERAGE: Cobertura ===
+    {
+      // z.B. CodeCoverage.OutputPath = "Pester-Coverage.Cobertura.xml"
+      "pattern": "**/Coverage.Cobertura.xml",
+      "systemId": "${userHome}/Documents/PowerShell/Modules/Pester/5.7.1/schemas/Cobertura/coverage-loose.dtd"
+    }
+  ]
+}

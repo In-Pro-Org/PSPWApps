@@ -1,0 +1,31 @@
+{
+	"recommendations": [
+		"ms-vscode.PowerShell",
+		"pspester.pester-test",
+		"humao.rest-client",
+		"bradlc.vscode-tailwindcss",
+		"otovo-oss.htmx-tags",
+		"sameer-dudeja.htmx-intellisense",
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint",
+		"ecmel.vscode-html-css",
+		"usernamehw.errorlens",
+		"eamodio.gitlens",
+		"EditorConfig.EditorConfig",
+		"redhat.vscode-yaml",
+		"mikestead.dotenv",
+		"christian-kohler.path-intellisense",
+		"formulahendry.auto-rename-tag",
+		"stylelint.vscode-stylelint",
+		"yzhang.markdown-all-in-one",
+		"attilabuti.mustache-syntax-vscode",
+		"rangav.vscode-thunder-client",
+		"ms-vscode-remote.remote-containers",
+		"ms-azuretools.vscode-docker",
+
+		"l13rary.l13-projects",
+		"tylerleonhardt.vscode-inline-values-powershell",
+		"DavidAnson.vscode-markdownlint"
+	]
+
+}
