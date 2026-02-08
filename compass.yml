@@ -1,0 +1,16 @@
+name: PSPWApps
+id: ari:cloud:compass:eddcc978-84fc-448e-904c-0d4d7a6ccae6:component/dcebf165-b94d-4d6f-a806-e63f9a99f66a/7f80233b-3e7b-454c-8175-4ff5189a869f
+description: My PodeWeb framework
+configVersion: 1
+typeId: SERVICE
+fields:
+  tier: 4
+links:
+  - name: null
+    type: REPOSITORY
+    url: https://github.com/In-Pro-Org/PSPWApps
+relationships:
+  DEPENDS_ON: []
+labels:
+  - source:github
+customFields: null
